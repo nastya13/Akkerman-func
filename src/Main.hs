@@ -7,9 +7,9 @@ akk m n = if m < 0
 	    else if n < 0
 		   then -1
 		   else let
-			  go a b = if a < 1
+			  go a b = if a == 0
 				     then b + 1
-				     else if b < 1
+				     else if a > 0 && b == 0
 					    then let a' = a - 1
 						     b' = 1
 						 in go a' b'
